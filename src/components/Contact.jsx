@@ -69,14 +69,21 @@ const Contact = () => {
                     Socials
                 </h3>
                 <div className="flex-center gap-5">
-                    {socials.map((social)=>
-                    <a 
-                    key={social.name} 
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="{social.name}"/>
-                )}
+                    {socials.map((social) =>
+                        <a
+                            key={social.name}
+                            href={social.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={social.name}
+                        >
+                            <img
+                                src={social.icon || social.img}
+                                alt={social.name}
+                                style={{ width: 32, height: 32 }}
+                            />
+                        </a>
+                    )}
                 </div>
             </div>
         </div>
